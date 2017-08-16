@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scxml xmlns="http://www.w3.org/2005/07/scxml" version="1.0" binding="early" xmlns:qt="http://www.qt.io/2015/02/scxml-ext" xmlns:xi="http://www.w3.org/2001/XInclude" datamodel="ecmascript" qt:editorversion="4.2.1">
+    <state id="State_1">
+        <qt:editorinfo geometry="-264.56;-279.97;-146.48;-52.51;361.48;208.51" scenegeometry="-264.56;-279.97;-411.04;-332.48;361.48;208.51"/>
+        <transition type="external" event="eventA" target="State_2">
+            <qt:editorinfo endTargetFactors="89.06;7.96"/>
+            <raise event="doA"/>
+            <raise event="doB"/>
+        </transition>
+    </state>
+    <state id="State_2">
+        <qt:editorinfo geometry="-570.23;35.96;-146.48;-54.55;349.48;242.55" scenegeometry="-570.23;35.96;-716.71;-18.59;349.48;242.55"/>
+        <transition type="external" event="eventA" target="State_3">
+            <qt:editorinfo endTargetFactors="5.28;52"/>
+            <raise event="doD"/>
+        </transition>
+        <onentry>
+            <raise event="doA"/>
+	</onentry>
+	<onentry>
+            <raise event="doC"/>
+        </onentry>
+        <onexit>
+            <raise event="doA"/>
+	</onexit>
+	<onexit>
+            <raise event="doE"/>
+        </onexit>
+    </state>
+    <state id="State_3">
+        <qt:editorinfo geometry="172.09;27.96;-189;-55.57;325;259.57" scenegeometry="172.09;27.96;-16.91;-27.61;325;259.57"/>
+        <transition type="external" target="Final_1"/>
+        <onentry>
+            <raise event="doB"/>
+        </onentry>
+    </state>
+    <final id="Final_1">
+        <qt:editorinfo geometry="161.12;-275.54;-20;-20;40;40" scenegeometry="161.12;-275.54;141.12;-295.54;40;40"/>
+    </final>
+</scxml>
